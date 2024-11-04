@@ -1,0 +1,31 @@
+
+services:
+  app:
+    image: lucksum/um:1.0
+    container_name: api_um_container
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8010:9095"
+    depends_on:
+      - mysqldb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/lucksum-um?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=uma12345
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL8Dialect
+
+  mysqldb:
+    image: mysql:8.0.37
+    container_name: db_um_container
+
+    environment:
+      - MYSQL_ROOT_PASSWORD=uma12345
+      - MYSQL_DATABASE=lucksum-um
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=uma12345
+    ports:
+      - "3307:3306"

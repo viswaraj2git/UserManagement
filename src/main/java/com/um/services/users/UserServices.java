@@ -1,12 +1,12 @@
-package com.services.users;
+package com.um.services.users;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.entity.users.Users;
-import com.repo.users.IuserRepo;
+import com.um.entity.users.Users;
+import com.um.repo.users.IuserRepo;
 
 @Service
 public class UserServices {

@@ -1,4 +1,4 @@
-package com.contollers.users;
+package com.um.contollers.users;
 
 import java.sql.Date;
 import java.util.List;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.entity.users.Users;
-import com.services.users.UserServices;
+import com.um.entity.users.Users;
+import com.um.services.users.UserServices;
 
 
 @RestController

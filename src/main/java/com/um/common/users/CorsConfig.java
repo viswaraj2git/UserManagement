@@ -1,4 +1,4 @@
-package com.common.users;
+package com.um.common.users;
 
 import org.springframework.context.annotation.Configuration;
 
