@@ -1,4 +1,4 @@
-package com.um.contollers.users;
+package com.um.users.contoller;
 
 import java.sql.Date;
 import java.util.List;
@@ -11,15 +11,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.um.entity.users.Users;
-import com.um.services.users.UserServices;
+import com.um.users.entity.Users;
+import com.um.users.services.UserServices;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "*")
+@RequestMapping("/um")
 public class UsersController {
 
 	@Autowired

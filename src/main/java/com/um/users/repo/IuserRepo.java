@@ -1,10 +1,10 @@
-package com.um.repo.users;
+package com.um.users.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.um.entity.users.Users;
+import com.um.users.entity.Users;
 
 @Repository
 public interface IuserRepo extends JpaRepository<Users, Integer>{
